@@ -1,0 +1,1 @@
+Node.js is a JavaScript runtime built on Chrome's V8 engine. It allows developers to write server-side applications using JavaScript. Node.js uses an event-driven, non-blocking I/O model that makes it efficient and scalable.
