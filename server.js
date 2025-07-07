@@ -37,7 +37,7 @@ const pinecone = new Pinecone({
 const index = pinecone.index(process.env.PINECONE_INDEX_NAME);
 
 function chunkText(text, chunkSize = 500) {
-  return text.match(/.{1,500}/g) || [];
+  return text.match(/.{1,500}/g) || []; 
 }
 
 
@@ -70,7 +70,8 @@ app.post('/uploadFile', upload.single('file'), async(req,res) => {
 //Endpoint : Ask a question
 app.post('/query', async(req,res) => {
   try {
-  const userPrompt = req.body.prompt;
+
+  const userPrompt = req.body.prompt
   const embeddingResponse = await ollama.embeddings(
     {
       model: 'mistral', 
